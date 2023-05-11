@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import Social from "./components/Social/Social";
+import Clock from "./components/Clock/Clock";
 
 function App() {
+  const [hour, setHours] = useState(new Date().getHours());
+  
+  useEffect(() => {
+    setInterval(() => setHours(new Date().getHours()), 1000);
+  })
+  
+  const [isDark] = useState(hour > 19 || hour < 7);
+
+  document.body.style.backgroundColor = isDark ? '#171512' : '#E8E8E8';
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={isDark ? "container-dark" : "container-light"}>
+      <p className="title">&gt;&nbsp;SHAWNPRADEEP</p>
+      <Clock isDark={isDark}/>
+      <Social isDark={isDark}/>
     </div>
   );
 }
