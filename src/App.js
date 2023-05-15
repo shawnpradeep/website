@@ -9,7 +9,7 @@ function App() {
     setInterval(() => setHours(new Date().getHours()), 1000);
   })
   
-  const [isDark] = useState(hour > 19 || hour < 7);
+  const [isDark] = useState(hour > 17 || hour < 7);
 
   document.body.style.backgroundColor = isDark ? '#171512' : '#E8E8E8';
 
