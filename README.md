@@ -2,6 +2,8 @@
 
 my website, built using react.
 
+dark mode automatically triggers at 6pm.
+
 designed & developed by @shawnpradeep
 
 
