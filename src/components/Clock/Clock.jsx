@@ -1,25 +1,39 @@
-import React, {useState, useEffect} from "react";
-import "./Clock.css"
+import React, { useState, useEffect } from "react";
+import "./Clock.css";
 
 function Clock() {
-  const dayNames = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+  const dayNames = [
+    "SUNDAY",
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+  ];
   const [time, setTime] = useState("loading...");
   const [date, setDate] = useState("");
   const [day, setDay] = useState("");
-  
+  const [zone, setZone] = useState("");
+
   useEffect(() => {
     setInterval(() => {
       const date = new Date();
       setDay(dayNames[date.getDay()]);
-      setTime(date.toLocaleTimeString() + " EST");
+      setZone(
+        date
+          .toLocaleTimeString("en-us", { timeZoneName: "short" })
+          .split(" ")[2]
+      );
+      setTime(date.toLocaleTimeString());
       setDate(date.toLocaleDateString());
-    }, 1000)
-  }, [])
+    }, 1000);
+  }, []);
 
   return (
     <div className="timestamp-container">
       <p>{day + " " + date}</p>
-      <p>{time}</p>
+      <p>{time + " " + zone}</p>
     </div>
   );
 }
