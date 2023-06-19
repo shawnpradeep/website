@@ -3,8 +3,9 @@
   width: 100px;
   justify-content: space-between;
   margin-left: 20px;
+  margin-top: 20px;
 }
 
-.social-container > a > img:hover{
+.social-container > a > img:hover {
   opacity: 0.8;
 }
