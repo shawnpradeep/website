@@ -3,6 +3,7 @@ import Social from "./components/Social/Social";
 import Clock from "./components/Clock/Clock";
 import Header from "./components/Header/Header";
 import Switch from "./components/Switch/Switch";
+import SnowAnimation from "./components/Snow/Snow";
 
 function App() {
   const LIGHT = "#E8E8E8";
@@ -43,8 +44,8 @@ function App() {
 
   return (
     <div className="container">
+      <SnowAnimation isDark={isDark} />
       <div className={isDark ? "container-dark" : "container-light"} id="main">
-        {/* <p className="title">&gt;&nbsp;SHAWNPRADEEP</p> */}
         <Header />
         <Clock isDark={isDark} />
         <Social isDark={isDark} />

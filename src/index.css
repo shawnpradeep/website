@@ -24,7 +24,8 @@ code {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #e8e8e8;
+  /* color: #e8e8e8; */
+  color: rgb(114, 231, 114);
 }
 
 .container-dark > * {
@@ -32,12 +33,17 @@ code {
   flex: 1;
 }
 
+.name {
+  color: rgb(236, 93, 93);
+}
+
 .container-light {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #171512;
+  /* color: #171512; */
+  color: rgb(0, 107, 0);
   flex: 1;
 }
 
