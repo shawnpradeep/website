@@ -10,10 +10,44 @@ body {
   background-color: #f8f8f8;
 }
 
-.generation {
+.bottom-left {
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
+  left: 1%;
+  text-align: left;
+}
+
+#name {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+#date,
+#time {
+  font-size: 8px;
+  margin: 0;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 1%;
   right: 1%;
   font-size: 8px;
   font-style: italic;
+  text-align: right;
+}
+
+.generation {
+  margin-bottom: 7px;
+}
+
+.social-container {
+  display: flex;
+  width: 60px;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.social-container > a > img:hover {
+  opacity: 0.8;
 }
