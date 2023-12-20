@@ -9,6 +9,7 @@ Author: Shawn Pradeep
 ### Controls
 
 Press 'r' to restart the animation.
+Press 'p' to pause the animation.
 
 ### Run Locally
 
