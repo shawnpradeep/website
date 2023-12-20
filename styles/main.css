@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: "Source Code Pro", monospace;
-  background-color: #f8f8f8;
+  background-color: #f8fcf8;
 }
 
 .bottom-left {
@@ -26,6 +26,7 @@ body {
 #time {
   font-size: 10px;
   margin: 0;
+  margin-left: 1px;
 }
 
 .bottom-right {

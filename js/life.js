@@ -5,7 +5,7 @@ const resolution = 1;
 const rows = canvas.height / resolution;
 const cols = canvas.width / resolution;
 let grid = createRandomGrid();
-let pause = false;
+let freeze = false;
 
 let generation = 0;
 const speed = 50;
@@ -26,7 +26,7 @@ function drawGrid() {
       const x = i * resolution;
       const y = j * resolution;
       if (grid[i][j] === 1) {
-        ctx.fillStyle = "black";
+        ctx.fillStyle = isDark ? "orange" : "#EE4B2B";
         ctx.fillRect(x, y, resolution, resolution);
       }
     }
@@ -72,7 +72,7 @@ function countNeighbors(x, y) {
 
 function animate() {
   drawGrid();
-  if (!pause) update();
+  if (!freeze) update();
   setTimeout(animate, speed);
 }
 
@@ -82,7 +82,7 @@ function handleKeyPress(event) {
     generation = 0;
   }
 
-  if (event.key === "P" || event.key === "p") pause = !pause;
+  if (event.key === "F" || event.key === "f") freeze = !freeze;
 }
 
 document.addEventListener("keydown", handleKeyPress);
