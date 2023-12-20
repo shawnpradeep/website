@@ -1,5 +1,5 @@
 let isDark = false;
-// let darkOverride = false;
+let darkOverride = false;
 
 const formatted_date = document.getElementById("date");
 const formatted_time = document.getElementById("time");
@@ -27,12 +27,17 @@ function updateDateTime() {
 
   formatted_date.innerText = day + " " + date;
   formatted_time.innerText = time + " " + zone;
-  //   if (!darkOverride) {
-  //     if (time[0] >= "6" && time[time.length - 2] === "P" && !isDark) {
-  //       isDark = !isDark;
-  //       toggleTheme();
-  //     }
-  //   }
+  if (!darkOverride) {
+    if (time[0] >= "6" && time[time.length - 2] === "P" && !isDark) {
+      isDark = !isDark;
+      toggleTheme();
+    }
+
+    if (time[0] >= "6" && time[time.length - 2] === "A" && isDark) {
+      isDark = !isDark;
+      toggleTheme();
+    }
+  }
 
   setTimeout(updateDateTime, 1000);
 }
