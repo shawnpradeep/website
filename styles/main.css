@@ -12,27 +12,27 @@ body {
 
 .bottom-left {
   position: absolute;
-  bottom: 1%;
+  bottom: 1.5%;
   left: 1%;
   text-align: left;
 }
 
 #name {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 2px;
 }
 
 #date,
 #time {
-  font-size: 8px;
+  font-size: 10px;
   margin: 0;
 }
 
 .bottom-right {
   position: absolute;
-  bottom: 1%;
+  bottom: 1.5%;
   right: 1%;
-  font-size: 8px;
+  font-size: 10px;
   font-style: italic;
   text-align: right;
 }
@@ -43,7 +43,7 @@ body {
 
 .social-container {
   display: flex;
-  width: 60px;
+  width: 70px;
   justify-content: space-between;
   margin-left: 20px;
 }
