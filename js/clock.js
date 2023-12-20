@@ -27,4 +27,15 @@ function updateDateTime() {
   setTimeout(updateDateTime, 1000);
 }
 
+function toggleTheme() {}
+
+function handleKeyPress(event) {
+  if (event.key === "D" || event.key === "d") {
+    darkMode = !darkMode;
+    toggleTheme();
+  }
+}
+
+document.addEventListener("keydown", handleKeyPress);
+
 updateDateTime();

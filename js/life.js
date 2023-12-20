@@ -82,7 +82,7 @@ function handleKeyPress(event) {
     generation = 0;
   }
 
-  // if (event.key === " ") pause = !pause;
+  if (event.key === "P" || event.key === "p") pause = !pause;
 }
 
 document.addEventListener("keydown", handleKeyPress);
