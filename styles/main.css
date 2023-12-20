@@ -51,3 +51,13 @@ body {
 .social-container > a > img:hover {
   opacity: 0.8;
 }
+
+@media only screen and (max-width: 550px) {
+  .bottom-left {
+    left: 3%;
+  }
+
+  .bottom-right {
+    right: 3%;
+  }
+}

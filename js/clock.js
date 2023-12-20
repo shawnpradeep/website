@@ -20,6 +20,7 @@ function updateDateTime() {
     .split(" ")[2];
 
   let time = date.toLocaleTimeString();
+  if (true) toggleTheme();
   date = date.toLocaleDateString();
 
   formatted_date.innerText = day + " " + date;
@@ -27,11 +28,15 @@ function updateDateTime() {
   setTimeout(updateDateTime, 1000);
 }
 
-function toggleTheme() {}
+function toggleTheme() {
+  if (darkMode) {
+    document.body.style.backgroundColor = "#171512";
+    document.body.style.color = "white";
+  }
+}
 
 function handleKeyPress(event) {
   if (event.key === "D" || event.key === "d") {
-    darkMode = !darkMode;
     toggleTheme();
   }
 }
