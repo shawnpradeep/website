@@ -16,6 +16,7 @@ const dayNames = [
 
 function updateDateTime() {
   let date = new Date();
+  let hours = date.getHours();
   let day = dayNames[date.getDay()];
   let zone = date
     .toLocaleTimeString("en-us", { timeZoneName: "short" })
@@ -28,13 +29,12 @@ function updateDateTime() {
   formatted_date.innerText = day + " " + date;
   formatted_time.innerText = time + " " + zone;
   if (!darkOverride) {
-    if (time[0] >= "6" && time[time.length - 2] === "P" && !isDark) {
-      isDark = !isDark;
+    // dark mode on from 6pm to 6am
+    if (hours > 17 || hours < 7) {
+      isDark = true;
       toggleTheme();
-    }
-
-    if (time[0] >= "6" && time[time.length - 2] === "A" && isDark) {
-      isDark = !isDark;
+    } else {
+      isDark = false;
       toggleTheme();
     }
   }
