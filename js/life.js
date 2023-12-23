@@ -43,6 +43,16 @@ function update() {
       const state = grid[i][j];
       const neighbors = countNeighbors(i, j);
 
+      // Mutation Code:
+
+      // if (
+      //   Math.random() * 100 >= 97 &&
+      //   state === 0 &&
+      //   (neighbors === 3 || neighbors === 2)
+      // ) {
+      //   nextGeneration[i][j] = 1;
+      // }
+
       if (state === 0 && neighbors === 3) {
         nextGeneration[i][j] = 1;
       } else if (state === 1 && (neighbors < 2 || neighbors > 3)) {
