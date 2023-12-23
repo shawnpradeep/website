@@ -44,7 +44,7 @@ body {
 
 .social-container {
   display: flex;
-  width: 70px;
+  width: 90px;
   justify-content: space-between;
   margin-left: 20px;
 }

@@ -51,6 +51,7 @@ function toggleTheme() {
       "public/icons/instagram_dark.svg";
     document.getElementById("linkedin").src = "public/icons/linkedin_dark.svg";
     document.getElementById("spotify").src = "public/icons/spotify_dark.svg";
+    document.getElementById("email").src = "public/icons/email_dark.svg";
   } else {
     document.body.style.backgroundColor = "#f8fcf8";
     document.body.style.color = "black";
@@ -59,6 +60,7 @@ function toggleTheme() {
       "public/icons/instagram_light.svg";
     document.getElementById("linkedin").src = "public/icons/linkedin_light.svg";
     document.getElementById("spotify").src = "public/icons/spotify_light.svg";
+    document.getElementById("email").src = "public/icons/email_light.svg";
   }
 }
 
