@@ -53,7 +53,7 @@ function toggleTheme() {
     document.getElementById("spotify").src = "public/icons/spotify_dark.svg";
     document.getElementById("email").src = "public/icons/email_dark.svg";
   } else {
-    document.body.style.backgroundColor = "#f8fcf8";
+    document.body.style.backgroundColor = "#FFFFFF";
     document.body.style.color = "black";
     document.getElementById("github").src = "public/icons/github_light.svg";
     document.getElementById("instagram").src =
